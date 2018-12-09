@@ -3,29 +3,23 @@ import React, { Component } from 'react';
 class NavBar extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </button>
-              <a className="navbar-brand" >Sutton Cottage</a>
-            </div>
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about-us">about us</a></li>
-                <li><a href="/calendar">calendar</a></li>
-                <li><a href="/contact-us">contact us</a></li>
-              </ul>
-            </div>
+      <div className="pos-f-t">
+        <div className="collapse" id="navbarToggleExternalContent">
+          <div className="bg-dark p-4">
+            <ul className="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about-us">about us</a></li>
+              <li><a href="/calendar">calendar</a></li>
+              <li><a href="/contact-us">contact us</a></li>
+            </ul>
           </div>
+        </div>
+        <nav className="navbar navbar-dark bg-dark">
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
         </nav>
-      </div >
+      </div>
     );
   }
 }
