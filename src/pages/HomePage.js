@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-
-class ImageCarousel extends Component {
+class HomePage extends Component {
 
   handleClick = (e) => {
     let direction = e.target.innerText
@@ -11,19 +10,17 @@ class ImageCarousel extends Component {
       this.props.handlePreviousClick()
     }
   }
+
   render() {
     return (
       <div>
-        <h1>Carousel Component</h1>
+        <h1>Sutton Family Cottage</h1>
         <button hidden={this.props.currentImageIndex === 0} onClick={this.handleClick}>Previous</button>
-        <img src={this.props.items[this.props.currentImageIndex]["url"]} alt="unsplash" />
-        <button hidden={this.props.currentImageIndex === this.props.items.length - 1} onClick={this.handleClick}>Next</button>
+        <img className='images' src={this.props.pictures[this.props.currentImageIndex]["url"]} alt="unsplash"></img>
+        <button hidden={this.props.currentImageIndex === this.props.pictures.length - 1} onClick={this.handleClick}>Next</button>
       </div>
     )
   }
 }
 
-
-export default ImageCarousel;
-
-
+export default HomePage;
